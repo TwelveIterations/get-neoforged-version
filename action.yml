@@ -1,0 +1,24 @@
+name: 'Get NeoForged Version'
+description:
+  'Finds the latest NeoForged version matching a version search string'
+author: Twelve Iterations
+
+branding:
+  icon: heart
+  color: red
+
+inputs:
+  artifact:
+    description: 'Artifact to search for (e.g., neoforge)'
+    required: true
+  version:
+    description: 'Version to search for (e.g., 21.11.* for wildcard matching)'
+    required: true
+
+outputs:
+  version:
+    description: 'The latest NeoForged version matching the search criteria'
+
+runs:
+  using: node20
+  main: dist/index.js
